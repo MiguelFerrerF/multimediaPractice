@@ -1,5 +1,6 @@
 #pragma once
 
+#include "config.h"
 // Define the exercise
 #if defined(EJERCICIO_1)
 #include "ui_ejercicio1.h"
@@ -16,20 +17,25 @@
 #else
 #include "ui_mainWindow.h"
 #endif
-#include <QtWidgets/QMainWindow>
 // include OpenCV
 #include <opencv2/opencv.hpp>
 
-class ejerciciosQt : public QMainWindow
+class ejerciciosQt: public QMainWindow
 {
-    Q_OBJECT
-
+	Q_OBJECT
 public:
     ejerciciosQt(QWidget *parent = nullptr);
-    ~ejerciciosQt();
+	~ejerciciosQt();
+
+private slots:
+// Create the slots 
+#if defined(EJERCICIO_1)
+	void onPressMeButtonClicked();
+	void onEraseButtonClicked();
+#endif
 
 private:
-	// Create a UI object
+// Create a UI object
 #if defined(EJERCICIO_1)
 	Ui::Ejercicio1 ui;
 #elif defined(EJERCICIO_2)
@@ -45,4 +51,6 @@ private:
 #else
 	Ui::MainWindow ui;
 #endif
+
+	void connectSignals();
 };

@@ -17,10 +17,6 @@
       <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
       <Extensions>ui</Extensions>
     </Filter>
-    <Filter Include="Translation Files">
-      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
-      <Extensions>ts</Extensions>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="ejerciciosQt.qrc">
@@ -29,9 +25,6 @@
     <QtUic Include="ejercicio2.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtMoc Include="ejerciciosQt.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
     <ClCompile Include="ejerciciosQt.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -48,5 +41,15 @@
     <QtUic Include="MainWindow.ui">
       <Filter>Form Files</Filter>
     </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="ejerciciosQt.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
 </Project>

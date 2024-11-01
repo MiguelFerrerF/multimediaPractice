@@ -70,6 +70,7 @@
     </Link>
     <ClCompile>
       <AdditionalIncludeDirectories>$(OPENCV_ROOT)\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
@@ -101,6 +102,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="config.h" />
     <QtRcc Include="ejerciciosQt.qrc" />
     <QtUic Include="ejercicio2.ui" />
     <QtMoc Include="ejerciciosQt.h" />
